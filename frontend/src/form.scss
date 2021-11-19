@@ -1,0 +1,55 @@
+#app {
+  font-family: 'Karla', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #ffffff;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #000000;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+h1 {
+	font-size: 60px;
+	display:inline-block;
+	border-radius: 8px;
+}
+
+p {
+	font-size: 20px;
+}
+
+button {
+  font-family: 'Karla', sans-serif;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: 1px solid black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #946565;
+  color: white;
+}
+
+.couverture {
+  height: 300px;
+  border-radius: 20px;
+  background-size: cover;
+  border: 2px solid darkgray;
+  color: #000; text-shadow: 1px 1px 0 #fff;
+}
