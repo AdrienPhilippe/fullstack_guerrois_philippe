@@ -29,7 +29,7 @@ Thrive est l'affichage des photos et la mise en page des onglets.
 
 Tous ces components sont liés grâce au routeur et à l'APP qui permet de faire la barre de navigation.
 
-Nous avons par la suite fait un form qui 
+Nous avons par la suite fait un form pour harmoniser le tout.
 
 ## Améliorations
 
