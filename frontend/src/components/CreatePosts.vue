@@ -20,35 +20,6 @@ export default {
     }
   }
 }
-
-// // import axios from "axios";
-// export default {
-//   data() {
-//     return {
-//       user_mail:null,
-//       pwd:null,
-//       form:{body:null}
-//     };
-//   },
-//   methods: {
-//     chooseFiles() {
-//         document.getElementById("fileUpload").click()
-//     }
-  // methods: {
-
-  //   async submit(){
-  //     try {
-  //       const q = "users/" + this.user_mail + "/posts/"
-  //       await axios.post(q,this.form).catch(error => {console.log(error)})
-  //       this.form.body = null
-  //       this.user_mail = null
-  //       this.pwd = null
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
-//   },
-// };
 </script>
 
 

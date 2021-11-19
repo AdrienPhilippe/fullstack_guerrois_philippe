@@ -2,15 +2,23 @@
   <div class="wrapper">
     <button class="change__style" @click="changeStyle()">Dark mode</button>
     <tabs :mode="mode">
-      <tab title="Sport">video from Sport
+      <tab title="Sport">
+        <p>post from Sport</p>
+        <img src="../assets/sport.jpeg">
       </tab>
-      <tab title="Humour">video from Humour
+      <tab title="Humour">
+        <p>post from Humour</p>
+        <img src="../assets/Humour.jpg">
       </tab>
-      <tab title="Wow">video from Wow
+      <tab title="Wow">
+        <p>post from Wow</p>
+        <img src="../assets/lotr.png">
       </tab>
-      <tab title="Aléatoire">video from Aléatoire
+      <tab title="Aléatoire">
+        <p>post from Aléatoire</p>
+        <button onclick="random()">Random</button>
+        <p id="demo"></p>
       </tab>
-
     </tabs>
   </div>
 </template>
@@ -57,7 +65,7 @@
       },
 
       showImages () {
-        }
+        },
     }
   }
 </script>

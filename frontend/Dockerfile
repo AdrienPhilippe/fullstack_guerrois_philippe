@@ -7,15 +7,19 @@ WORKDIR /
 COPY package*.json ./
 
 # installe les dépendances du projet
-RUN npm install
+RUN npm install --global yarn
 
 # copie les fichiers et dossiers du projet dans le dossier de travail (par exemple : le dossier 'app')
 COPY . .
 
 # # construit l'app
-RUN npm run build 
+RUN yarn install
 
-RUN npm install --global lite-server 
+
+### Compiles and minifies for production
+
+RUN yarn run serve
+
 
 EXPOSE 3000
 CMD [ "lite-server", "--baseDir=dist" ]
