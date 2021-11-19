@@ -32,15 +32,15 @@ class PostList(PostBase):
     class Config:
         orm_mode=True
 
-class CommentBase(BaseModel):
-    name:str
-    body:str
-    email:str
+# class CommentBase(BaseModel):
+#     name:str
+#     body:str
+#     email:str
 
-class CommentList(CommentBase):
-    id: int
-    post_id:int
-    created_date: Optional[datetime.datetime]= Body(None)
+# class CommentList(CommentBase):
+#     id: int
+#     post_id:int
+#     created_date: Optional[datetime.datetime]= Body(None)
 
-    class Config:
-        orm_mode= True
+#     class Config:
+#         orm_mode= True

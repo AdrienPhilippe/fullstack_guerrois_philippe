@@ -86,21 +86,21 @@ def create_post(
 def post_list(db: Session = Depends(get_db)):
     return crud.post_list(db=db)
 
-@app.post("/posts/{post_id}/comment",response_model=schemas.CommentList)
-def create_comment(
-        comment:schemas.CommentBase ,post_id:int,db:Session = Depends(get_db)
-):
-    return  crud.create_comment(db=db,post_id=post_id,comment=comment)
+# @app.post("/posts/{post_id}/comment",response_model=schemas.CommentList)
+# def create_comment(
+#         comment:schemas.CommentBase ,post_id:int,db:Session = Depends(get_db)
+# ):
+#     return  crud.create_comment(db=db,post_id=post_id,comment=comment)
 
-@app.get("/posts/{post_id}")
-def post_detail(post_id:int,db: Session = Depends(get_db)):
-    post =crud.get_post(db=db, id=post_id)
-    comment = db.query(models.Comment).filter(models.Comment.post_id == post_id)
-    active_comment = comment.filter(models.Comment.is_active == True).all()
+# @app.get("/posts/{post_id}")
+# def post_detail(post_id:int,db: Session = Depends(get_db)):
+#     post =crud.get_post(db=db, id=post_id)
+#     comment = db.query(models.Comment).filter(models.Comment.post_id == post_id)
+#     active_comment = comment.filter(models.Comment.is_active == True).all()
 
-    if post is None:
-        raise HTTPException(status_code=404,detail="post does not exist")
-    return {"post":post,"active_comment":active_comment}
+#     if post is None:
+#         raise HTTPException(status_code=404,detail="post does not exist")
+#     return {"post":post,"active_comment":active_comment}
 
 
 # @app.post("/items/", response_model=schemas.Item)
